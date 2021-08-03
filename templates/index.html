@@ -1,0 +1,74 @@
+{% extends "import.html" %} 
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container1">
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </div>
+    <h1 style="text-align: center; color: white; margin-top: 10px;text-shadow: 2px 2px 4px #000000;">Crop Disease Detection</h1>
+    <div class="MainContainer">
+        <div class="entry_form">
+            <h3>Why is it necessary to detect disease in plant ?</h3>
+            <p>Plant diseases affect the growth of their respective species.
+                In addition, some research gaps are identified from which to obtain greater transparency for detecting
+                diseases in plants, even before their symptoms appear clearly.
+                diagnosis is one of the most important aspects of a plant pathologist's training.
+                Without proper identification of the disease and the disease-causing agent, disease control measures can
+                be
+                a waste of time
+                and money and can lead to further plant losses. Proper disease diagnosis is necessary.
+            </p>
+        </div>
+        <div class="entry_form">
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+           </form>
+           <div class="image-section" style="display:none;">
+                <img id="imagePreview"  class="img-responsive" src="#" style="width: 150px;height:150px;"/><br><br>
+                <div>
+                   <button type="button" class="btn btn-info btn-lg" id="btn-predict">Predict!</button>
+                </div>
+           </div>
+           <div class="loader" style="display:none;"></div>
+       
+           <h3 id="result">
+               <span> </span>
+           </h3>
+           <div style="margin-top: 20px; width: 250px; padding: 10px; background-color: green;  border-radius: 50px; display: flex; justify-content: center;">
+            <a href="https://docs.google.com/document/d/1JaJQ_iH3N87NScI-Fqs5wtUzl32XiqGiFo3p_F24d68/edit?usp=sharing" style="text-align: center;">Click me! for remedies</a>
+           </div>
+        </div>
+        <div class="entry_form">
+            <h3>Prevent Plant Disease follow below steps :</h3>
+            <ol>
+                <li>Follow Good Sanitation Practices.</li>
+                <li>Fertilize to Keep Your Plants Healthy.</li>
+                <li>Inspect Plants for Diseases Before You Bring Them Home.</li>
+                <li>Allow the Soil to Warm Before Planting</li>
+                <li>Ensure a Healthy Vegetable Garden By Rotating Crops.</li>
+                <li>Provide Good Air Circulation</li>
+                <li>Remove Diseased Stems and Foliage</li>
+            </ol>
+            <button><a href="https://www.thespruce.com/prevent-plant-diseases-in-your-garden-2539511">More Info</a></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+{% endblock %}
